@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venia</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+    <header>
+        <nav class="product-navigation">
+            <div class="product-logo">
+                <div>VENIA</div>
+            </div>
+            <ul>
+                <li><a href="#section1" onclick="showSection('section1')">Home</a></li>
+                <li><a href="#section2" onclick="showSection('section2')">Women</a></li>
+                <li><a href="cart.html">Men</a></li>
+                <li><a href="checkout.html">Electronics</a></li>
+                <li><a href="checkout.html">Jewellery</a></li>
+            </ul>
+            <div class="product-cart">
+                <img class="h-100 w-100" src="assets/images/icons/cart.svg" alt="cart" />
+            </div>
+        </nav>
+    </header>
+    <section id="section1" class="venia-page-container tab home-container" style="display: block;">
+        <section class="container m-0 product-container">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="product-banner">
+                        <div class="banner-description h-100">
+                            <h1 class="banner-container banner-header">Shop the new Signature Collection</h1>
+                            <div class="banner-container header-description">Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Amet
+                                repellendus aperiam
+                                obcaecati vitae, ratione quaerat perferendis unde doloribus! Nobis obcaecati quam
+                                ratione
+                                laborum autem cumque corporis, vel dolores officiis consequatur.</div>
+                            <button class="action primary">Shop Now</button>
+                        </div>
+                        <div class="banner-img">
+                            <img class="h-100 w-100" src="assets/images/b2.jpg" alt="Image 1">
+                        </div>
+                    </div>
+                    <div class="product-banner">
+                        <div class="banner-description h-100">
+                            <h1 class="banner-container banner-header">New Signature Collection</h1>
+                            <div class="banner-container header-description">Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Amet
+                                repellendus aperiam
+                                obcaecati vitae, ratione quaerat perferendis unde doloribus! Nobis obcaecati quam
+                                ratione
+                                laborum autem cumque corporis, vel dolores officiis consequatur.</div>
+                            <button class="action primary">Shop Now</button>
+                        </div>
+                        <div class="banner-img">
+                            <img class="h-100 w-100" src="assets/images/b4.jpg" alt="Image 1">
+                        </div>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+        </section>
+        <section class="container m-0 product-category-banner">
+            <div class="top-banner">
+                <div class="flex-row banner-category">
+                    <div class="banner-img">
+                        <img src="assets/images/f8.jpg" />
+                    </div>
+                    <div class="banner-info">
+                        <div class="category">Women</div>
+                        <div class="category-description">Lorem ipsum, dolor sit amet consectetur</div>
+                    </div>
+                </div>
+                <div class="flex-row banner-category">
+                    <div class="banner-img">
+                        <img src="assets/images/f2.jpg" />
+                    </div>
+                    <div class="banner-info">
+                        <div class="category">Men</div>
+                        <div class="category-description">Lorem ipsum, dolor sit amet consectetur</div>
+                    </div>
+                </div>
+                <div class="flex-row banner-category">
+                    <div class="banner-img">
+                        <img src="assets/images/b7.jpg" />
+                    </div>
+                    <div class="banner-info">
+                        <div class="category">Jewellery</div>
+                        <div class="category-description">Lorem ipsum, dolor sit amet consectetur</div>
+                    </div>
+                </div>
+                <div class="flex-row banner-category">
+                    <div class="banner-img">
+                        <img src="assets/images/b16.jpg" />
+                    </div>
+                    <div class="banner-info">
+                        <div class="category">Electronics</div>
+                        <div class="category-description">Lorem ipsum, dolor sit amet consectetur</div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-thumbnail">
+                <div class="product-banner">
+                    <div class="banner-description h-100">
+                        <h1 class="banner-container banner-header">Take off in the new Signature Legging</h1>
+                        <div class="banner-container header-description">Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Amet
+                            repellendus aperiam
+                            obcaecati vitae, ratione quaerat perferendis unde doloribus! Nobis obcaecati quam ratione.
+                        </div>
+                        <div class="flex-center banner-action">
+                            <button class="action primary">Shop Now</button>
+                            <button class="action secondary">Shop Collection</button>
+                        </div>
+                    </div>
+                    <div class="banner-img">
+                        <img class="h-100 w-100" src="assets/images/group.jpg" alt="Image 1">
+                    </div>
+                </div>
+            </div>
+            <div class="banner-thumbnail-2">
+                <div class="product-banner">
+                    <div class="banner-img">
+                        <img class="h-100 w-100" src="assets/images/b10.jpg" alt="Image 1">
+                    </div>
+                    <div class="banner-description h-100">
+                        <h1 class="banner-container banner-header">Conquer your next adventure</h1>
+                        <div class="banner-container header-description">Lorem Ipsum Dolor Tempor
+                        </div>
+                        <div class="flex-center banner-action">
+                            <button class="action transparent">Shop Device</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="section2" class="venia-page-container tab venia-product-page" style="display: none;">
+        <div class="banner-thumbnail">
+            <div class="banner-product flex-center">
+                <div class="banner-container banner-header">Men’s <br /> Outerwear</div>
+            </div>
+            <div class="banner-img">
+                <img class="h-100 w-100" src="assets/images/b10.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="product-page">
+            <div class="product-filtration">
+                <div class="bread-crumbs">Clothing/ Women</div>
+                <div class="">
+                    <h4 class="filters vector">Filters</h4>
+                    <div class="category vector">
+                        <h5 class="title">Categories</h5>
+                        <div class="checkbox-selection">
+                            <div class="option flex-center">
+                                <input type="checkbox" class="product-checkbox" value="men's clothing" />
+                                <div class="label">Men's Clothing</div>
+                            </div>
+                            <div class="option flex-center">
+                                <input type="checkbox" class="product-checkbox" value="women's clothing" />
+                                <div class="label">Women's Clothing</div>
+                            </div>
+                            <div class="option flex-center">
+                                <input type="checkbox" class="product-checkbox" value="jewelery" />
+                                <div class="label">Jewelery</div>
+                            </div>
+                            <div class="option flex-center">
+                                <input type="checkbox" class="product-checkbox" value="electronics" />
+                                <div class="label">Electronics</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-cart-page">
+                <div class="product-filter-header">
+                    <div id="search-count"></div>
+                    <div class="sort-and-search">
+                        <div>
+                            <input type="text" id="searchInput" placeholder="Search by product">
+                        </div>
+                        <div class="product-dropdown">
+                            <select id="sortSelect">
+                                <option value="title asc">Sort by A - Z</option>
+                                <option value="title desc">Sort by Z - A</option>
+                                <option value="price asc">Sort by Low - High</option>
+                                <option value="price desc">Sort by High - Low</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="venia-product-list" id="product-list"></div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section id="section3" class="venia-page-container tab venia-product-byId">
+        <div id="productById"></div>
+    </section>
+    <footer>
+        <div class="about-footer-container">
+            <div class="info-container flex-row">
+                <h4 class="title">Account</h4>
+                <div class="about-list">
+                    <div>Sign In</div>
+                    <div>Register</div>
+                    <div>Order Status</div>
+                </div>
+            </div>
+            <div class="info-container flex-row">
+                <h4 class="title">About Us</h4>
+                <div class="about-list">
+                    <div>Our Story</div>
+                    <div>Career</div>
+                </div>
+            </div>
+            <div class="info-container flex-row">
+                <h4 class="title">Our Story</h4>
+                <div class="about-list">
+                    <div>Contact Us</div>
+                    <div>Order Status</div>
+                    <div>Returns</div>
+                </div>
+            </div>
+            <div class="info-container flex-row">
+                <h4 class="title">Follow</h4>
+                <div class="about-list">
+                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat nobis corrupti consectetur
+                        tenetur odio, magni dolorem tempore, amet similique ipsum temporibus ipsa, ad rem? Deserunt
+                        porro atque asperiores. Modi, debitis.</div>
+                    <div class="flex social-logo">
+                        <img src="assets/images/icons/facebook.svg" />
+                        <img src="assets/images/icons/instagram.svg" />
+                        <img src="assets/images/icons/twitter.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-footer">
+            <div class="product-logo">
+                <div>VENIA</div>
+            </div>
+            <div>© Company Name Address Ave, City Name, State ZIP</div>
+            <div class="flex terms">
+                <div class="underline">Terms of Use</div>
+                <div class="underline">Private Policy</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/index.js"></script>
+    <script src="./assets/scripts/slider.js"></script>
+    <script>
+        function showSection(sectionId) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.style.display = 'none';
+            });
+
+            const selectedTab = document.getElementById(sectionId);
+            if (selectedTab) {
+                selectedTab.style.display = 'block';
+            }
+        }
+    </script>
+    <script>
+        let productData = [];
+        let endPoint = 'https://fakestoreapi.com/products'
+        const itemsPerPage = 9;
+        let currentPage = 1;
+        function getProducts() {
+            return fetch(endPoint)
+                .then(response => {
+                    if (!response.ok) {
+                        console.error(`Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    productData = data;
+                    return data;
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                });
+        }
+
+        function displayProducts(products) {
+            const container = document.getElementById('product-list');
+            container.innerHTML = '';
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const productFitered = products.slice(startIndex, endIndex);
+            const spanTag = document.createElement('span');
+            spanTag.textContent = 'No Records';
+            spanTag.style.color = 'grey';
+            spanTag.style.textAlign = 'center';
+
+            const serachCount = document.getElementById('search-count');
+            serachCount.innerHTML = `${productFitered?.length}/${products?.length} ${productFitered.length > 1 ? 'Results' : 'Result'}`
+            
+            productFitered?.length > 0 ?
+                productFitered.forEach(item => {
+                    const div = document.createElement('div');
+                    div.classList.add('product-item');
+                    div.innerHTML = `
+                <img class="product-image" src=${item.image} onclick="redirectTo(item.id)"/>
+                <div class="product-description">
+        <h3 class="product-title">${item.title}</h3>
+        <p class="product-price">$${item.price}</p>
+        <img class="product-wishlist" src="assets/images/icons/heart.svg" />
+        </div>
+    `;
+                    container.appendChild(div);
+                }) : (
+                    container.appendChild(
+                        spanTag
+                    )
+                )
+
+            generatePagination(products.length);
+        }
+
+        function generatePagination(totalItems) {
+            const numPages = Math.ceil(totalItems / itemsPerPage);
+            const paginationElement = document.getElementById('pagination');
+            paginationElement.innerHTML = '';
+
+            for (let i = 1; i <= numPages; i++) {
+                const pageLink = document.createElement('a');
+                pageLink.href = '#';
+                pageLink.classList.add('page-link');
+                if (i === currentPage) {
+                    pageLink.classList.add('active');
+                }
+                pageLink.textContent = i;
+                pageLink.addEventListener('click', () => {
+                    currentPage = i;
+                    displayProducts(productData);
+                    updateActivePageLink();
+                });
+                paginationElement.appendChild(pageLink);
+            }
+        }
+
+        function updateActivePageLink() {
+            const pageLinks = document.querySelectorAll('.page-link');
+            pageLinks.forEach(link => {
+                link.classList.remove('active');
+                if (parseInt(link.textContent) === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        function filterProducts(query) {
+            query = query.toLowerCase().trim();
+            return productData.filter(product =>
+                product.title.toLowerCase().includes(query) ||
+                product.description.toLowerCase().includes(query)
+            );
+        }
+
+        function sortProducts(key) {
+            let sortKey = key?.split(' ')
+
+            let sortNumber = (a, b) =>
+                sortKey[1] === "asc"
+                    ? a[sortKey[0]] - b[sortKey[0]]
+                    : b[sortKey[0]] - a[sortKey[0]];
+
+            let sortString = (a, b) =>
+                sortKey[1] === "asc"
+                    ? a[sortKey[0]]?.toString().localeCompare(b[sortKey[0]]?.toString())
+                    : b[sortKey[0]]?.toString().localeCompare(a[sortKey[0]]?.toString());
+            let tempData = productData.sort(
+                sortKey[0] == 'price' ? sortNumber : sortString
+            );
+            return productData.slice().sort((a, b) => {
+                if (a[key] < b[key]) return -1;
+                if (a[key] > b[key]) return 1;
+                return 0;
+            });
+        }
+
+        const checkboxes = document.querySelectorAll('.product-checkbox');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                const checkedValues = Array.from(checkboxes)
+                    .filter(x => x.checked)
+                    .map(check => check.value);
+
+                if (checkedValues.length > 0) {
+                    const filterRecords = productData?.filter((x) => checkedValues?.includes(x?.category))
+                    displayProducts(filterRecords)
+                } else {
+                    displayProducts(productData)
+                }
+            });
+        });
+
+        // Event listeners for search and sort
+        document.getElementById('searchInput')?.addEventListener('input', () => {
+            const filteredProducts = filterProducts(searchInput.value);
+            displayProducts(filteredProducts);
+        });
+
+        document.getElementById('sortSelect')?.addEventListener('change', () => {
+            const sortedProducts = sortProducts(sortSelect.value);
+            displayProducts(sortedProducts);
+        });
+
+
+        const quantityInputs = document.querySelectorAll('.quantity-input');
+        const incrementButtons = document.querySelectorAll('.increment');
+        const decrementButtons = document.querySelectorAll('.decrement');
+
+        incrementButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const input = button.previousElementSibling; // Get the input element
+                let currentValue = parseInt(input.value); // Get current value and parse as integer
+                input.value = currentValue + 1; // Increment value
+            });
+        });
+
+        // Add event listeners to decrement buttons
+        decrementButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const input = button.nextElementSibling; // Get the input element
+                let currentValue = parseInt(input.value); // Get current value and parse as integer
+                if (currentValue > 1) { // Check if value is greater than 1
+                    input.value = currentValue - 1; // Decrement value
+                }
+            });
+        });
+
+        quantityInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                let value = parseInt(input.value);
+                if (isNaN(value) || value < 1) {
+                    input.value = 1;
+                }
+            });
+        });
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Get user ID from query parameter
+        const userId = getParameterByName('id');
+
+        function getProductsById(products) {
+            let filterRecords = products?.filter((x) => x.id == userId)
+            const container = document.getElementById('productById');
+            container.innerHTML = '';
+            const spanTag = document.createElement('span');
+            spanTag.textContent = 'No Records';
+            spanTag.style.color = 'grey';
+            spanTag.style.textAlign = 'center';
+
+            const div = document.createElement('div');
+            div.classList.add('product-container');
+            if (filterRecords?.length > 0) {
+                div.innerHTML = `
+             <div class="product-head">
+                    <div class="product-image">
+                        <img src=${filterRecords[0].image} />
+                    </div>
+                    <div class="product-description">
+                        <div class="product-breadcrums">Clothing / Women’s / ${filterRecords[0]?.category}</div>
+                        <h2 class="product-title">${filterRecords[0]?.title}</h2>
+                        <h5 class="product-price">$${filterRecords[0]?.price}</h5>
+                        <div class="product-rating">${filterRecords[0]?.rating?.rate} (${filterRecords[0]?.rating?.count})</div>
+                        <div class="short-description">${filterRecords[0].description}</div>
+                        <h4 class="">Quantity</h4>
+                        <div class="quantity">
+                            <button class="decrement">-</button>
+                            <input type="number" id="quantityInput" class="quantity-input" value="1" min="1">
+                                <button class="increment">+</button>
+                        </div>
+                        <div class="total-price"></div>
+                        <button class="action primary">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="production-brief-description">
+                    <h2>${filterRecords[0].title}</h2>
+                    <h4>Description</h4>
+                    <div class="brief-description">
+                        ${filterRecords[0].description}
+                    </div>
+                </div>
+    `;
+            }
+
+            filterRecords?.length > 0 ? (
+                container.appendChild(div)
+            ) : (
+                container.appendChild(
+                    spanTag
+                )
+            )
+
+        }
+        if (userId) {
+            getProducts()
+                .then(product => {
+                    getProductsById(product);
+                })
+                .catch(error => {
+                    console.error('Error fetching products:', error);
+                    // Handle error (e.g., display error message to user)
+                });
+        } else {
+            // Fetch Products and initialize display
+            getProducts()
+                .then(product => {
+                    displayProducts(product);
+                })
+                .catch(error => {
+                    console.error('Error fetching products:', error);
+                    // Handle error (e.g., display error message to user)
+                });
+        }
+
+    </script>
+</body>
+
+</html>

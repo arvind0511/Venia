@@ -1,0 +1,195 @@
+body {
+    font-family: "Mulish", sans-serif;
+    font-size: 15px;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.action {
+    outline: none;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px 10px;
+    width: fit-content;
+    min-width: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.primary {
+    background-color: var(--primary-brand);
+    color: var(--white);
+    border: 1px solid var(--primary-brand);
+}
+
+button.transparent {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+button.secondary {
+    color: var(--primary-brand);
+    background-color: var(--white);
+    border: 1px solid var(--primary-brand);
+}
+
+button.primary:hover {
+    color: var(--primary-brand);
+    background-color: var(--white);
+}
+
+button.secondary:hover {
+    background-color: var(--primary-brand);
+    color: var(--white);
+}
+
+button.transparent:hover {
+    background-color: var(--white);
+    color: var(--gray-d2);
+}
+
+
+/* Header Component */
+
+.product-navigation {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+
+.product-navigation .product-logo {
+    width: 100px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.product-navigation .product-cart {
+    height: 30px;
+    width: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Page Component */
+
+.venia-page-container {
+    margin: 60px 0;
+}
+
+
+/* Footer Container */
+
+Footer {
+    width: 100%;
+}
+
+Footer .about-footer-container {
+    border-top: 4px solid var(--gray-l1);
+    border-bottom: 4px solid var(--gray-l1);
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-gap: 0 10px;
+}
+
+Footer .about-footer-container .info-container h4 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+Footer .about-footer-container .info-container .about-list {
+    font-size: 15px;
+}
+
+Footer .about-footer-container .info-container .social-logo img {
+    margin: 10px 15px 10px 0;
+    height: 20px;
+    width: 20px;
+}
+
+Footer .copyright-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+Footer .product-logo {
+    width: 150px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+Footer .copyright-footer .terms .underline {
+    font-size: 12px;
+    margin: 0 5px;
+}

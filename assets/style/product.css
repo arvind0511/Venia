@@ -1,0 +1,228 @@
+.venia-product-page {}
+
+.venia-product-page .banner-thumbnail {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.venia-product-page .banner-thumbnail .banner-product {
+    background-color: var(--primary-m1);
+    color: var(--white);
+}
+
+.venia-product-page .banner-thumbnail .banner-product .banner-header {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 4px solid var(--primary-brand);
+}
+
+.venia-product-page .banner-thumbnail .banner-img {
+    height: 300px;
+}
+
+.venia-product-page .banner-thumbnail .banner-img img {
+    object-fit: cover;
+    margin: 10px 0;
+    height: calc(100% - 20px);
+}
+
+.venia-product-page .product-page {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.venia-product-page .product-page .product-filtration {
+    padding: 35px 20px;
+}
+
+.venia-product-page .product-page .product-filtration .bread-crumbs {
+    font-size: 14px;
+
+}
+
+.venia-product-page .product-page .vector {
+    border-bottom: 3px solid var(--gray-l1);
+}
+
+.venia-product-page .product-page .filters {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+.venia-product-page .product-page .category .checkbox-selection {
+    padding-bottom: 15px;
+}
+
+.venia-product-page .product-page .category .checkbox-selection .option {
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.venia-product-page .product-page .category .checkbox-selection .option .label {
+    margin-left: 10px;
+}
+
+.product-cart-page .product-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto 50px;
+}
+.product-cart-page .product-filter-header .sort-and-search {
+    display: flex;
+    align-items: center;
+}
+.product-cart-page .product-filter-header .sort-and-search input {
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid var(--gray-l1);
+    width: 200px;
+    outline: none !important;
+    padding: 0 5px;
+}
+.product-cart-page .product-filter-header .sort-and-search select{
+    border-radius: 8px;
+    outline: none;
+    width: 150px;
+    height: 35px;
+    padding: 0 5px;
+}
+.product-cart-page .product-filter-header .sort-and-search .product-dropdown {
+    margin-left: 15px;
+}
+
+.product-cart-page .venia-product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 15px;
+}
+
+/* .product-cart-page .product-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-gap: 0 10px;
+} */
+
+.product-cart-page .product-list .product-item {
+    height: 350px;
+    width: 250px;
+    background-color: var(--white);
+}
+
+.product-cart-page .venia-product-list .product-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.product-cart-page .venia-product-list .product-item .product-description {
+    height: 100px;
+}
+
+.product-cart-page .venia-product-list .product-item .product-description .product-title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.product-cart-page .venia-product-list .product-item .product-description .product-price {
+    font-size: 14px;
+}
+.product-cart-page .venia-product-list .product-item .product-description .product-wishlist {
+    width: 14px;
+    height: 14px
+}
+
+.product-cart-page .venia-product-list .product-item {}
+
+.product-cart-page .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.product-cart-page .pagination .page-link {
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 1;
+}
+.product-cart-page .pagination .page-link.active { 
+    border-bottom: 1px solid var(--primary-m1);
+    color: var(--primary-m1);
+}
+.product-cart-page .pagination .page-link:hover {
+    opacity: 0.5;
+}
+
+.venia-product-byId {
+    
+}
+.venia-product-byId .product-container {
+    width: calc(100% - 60px);
+    padding: 30px;
+}
+.venia-product-byId .product-container .product-head {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    grid-gap: 15px 30px;
+}
+.venia-product-byId .product-container .product-head .product-image img {
+    width: 100%;
+    height: 100%;
+}
+.venia-product-byId .product-container .product-head .product-description {
+    width: 100%;
+}
+.venia-product-byId .product-container .product-head .product-description .product-breadcrums {
+    font-size: 13px;
+}
+.venia-product-byId .product-container .product-head .product-description .product-rating {
+    font-size: 14px;
+
+}
+.venia-product-byId .product-container .product-head .product-description .short-description {
+margin: 10px 0;
+padding-bottom: 20px;
+border-bottom: 3px solid var(--gray-l1);
+}
+.venia-product-byId .product-container .product-head .product-description .quantity {
+    margin-bottom: 20px;
+}
+.venia-product-byId .product-container .product-head .product-description .primary {
+    min-width: 200px;
+}
+
+.venia-product-byId .product-container .product-head .product-description .quantity {
+    display: flex;
+    align-items: center;
+}
+.venia-product-byId .product-container .product-head .product-description .quantity input {
+    width: 60px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 5px;
+    outline: none;
+    border: 1px solid var(--gray-l1);
+}
+.venia-product-byId .product-container .product-head .product-description .quantity button {
+    /* padding: 5px 10px; */
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+.venia-product-byId .product-container .production-brief-description {
+    margin-top: 60px;
+}
