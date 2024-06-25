@@ -13,25 +13,41 @@
 </head>
 
 <body>
-    <div id="header"></div>
     <header>
         <nav class="product-navigation">
-            <div class="product-logo">
-                <div>VENIA</div>
+            <div class="nav-header">
+                <div class="nav-thumnail" onclick="showSideBar()">
+                    <img class="h-100 w-100" src="assets/images/icons/nav.svg" alt="cart" />
+                </div>
+                <div class="product-logo">
+                    <div>VENIA</div>
+                </div>
             </div>
             <ul>
-                <li><a href="#section1" onclick="showSection('section1')">Home</a></li>
-                <li><a href="#section2" onclick="showSection('section2')">Women</a></li>
-                <li><a href="cart.html">Men</a></li>
-                <li><a href="checkout.html">Electronics</a></li>
-                <li><a href="checkout.html">Jewellery</a></li>
+                <li><a href="#" onclick="showSection('section1')">Home</a></li>
+                <li><a href="#" onclick="showSection('section2')">Women</a></li>
+                <li><a href="#" onclick="showSection('section2')">Men</a></li>
+                <li><a href="#" onclick="showSection('section2')">Electronics</a></li>
+                <li><a href="#" onclick="showSection('section2')">Jewelery</a></li>
             </ul>
             <div class="product-cart">
                 <img class="h-100 w-100" src="assets/images/icons/cart.svg" alt="cart" />
             </div>
         </nav>
     </header>
-    <section id="section1" class="venia-page-container tab home-container" style="display: block;">
+    <div class="side-bar">
+        <div class="close-sidebar">
+            <div class="close-icon" onclick="hideSideBar()">x</div>
+        </div>
+        <ul>
+            <li><a href="#" onclick="hideSideBar('section1')">Home</a></li>
+            <li><a href="#" onclick="hideSideBar('section2')">Women</a></li>
+            <li><a href="#" onclick="hideSideBar('section2')">Men</a></li>
+            <li><a href="#" onclick="hideSideBar('section2')">Electronics</a></li>
+            <li><a href="#" onclick="hideSideBar('section2')">Jewelery</a></li>
+        </ul>
+    </div>
+    <section id="section1" class="venia-page-container nav-tab home-container" style="display: none;">
         <section class="container m-0 product-container">
             <div class="slider-container">
                 <div class="slider">
@@ -145,7 +161,7 @@
             </div>
         </section>
     </section>
-    <section id="section2" class="venia-page-container tab venia-product-page" style="display: none;">
+    <section id="section2" class="venia-page-container nav-tab venia-product-page" style="display: block;">
         <div class="banner-thumbnail">
             <div class="banner-product flex-center">
                 <div class="banner-container banner-header">Men’s <br /> Outerwear</div>
@@ -157,7 +173,7 @@
         <div class="product-page">
             <div class="product-filtration">
                 <div class="bread-crumbs">Clothing/ Women</div>
-                <div class="">
+                <div class="category-filter">
                     <h4 class="filters vector">Filters</h4>
                     <div class="category vector">
                         <h5 class="title">Categories</h5>
@@ -184,11 +200,14 @@
             </div>
             <div class="product-cart-page">
                 <div class="product-filter-header">
-                    <div id="search-count"></div>
                     <div class="sort-and-search">
+                        <div id="search-count"></div>
                         <div>
                             <input type="text" id="searchInput" placeholder="Search by product">
                         </div>
+                    </div>
+
+                    <div class="sort-and-filter">
                         <div class="product-dropdown">
                             <select id="sortSelect">
                                 <option value="title asc">Sort by A - Z</option>
@@ -197,14 +216,40 @@
                                 <option value="price desc">Sort by High - Low</option>
                             </select>
                         </div>
+                        <div class="filter-category">
+                            <div onclick="filterCategory()"><img src="assets/images/icons/filter.svg" /></div>
+                            <div onclick="filterCategory()">Filter Results</div>
+                            <div class="filter-mob-category">
+                                <div class="checkbox-selection">
+                                    <div class="option flex-center">
+                                        <input type="checkbox" class="product-checkbox" value="men's clothing" />
+                                        <div class="label">Men's Clothing</div>
+                                    </div>
+                                    <div class="option flex-center">
+                                        <input type="checkbox" class="product-checkbox" value="women's clothing" />
+                                        <div class="label">Women's Clothing</div>
+                                    </div>
+                                    <div class="option flex-center">
+                                        <input type="checkbox" class="product-checkbox" value="jewelery" />
+                                        <div class="label">Jewelery</div>
+                                    </div>
+                                    <div class="option flex-center">
+                                        <input type="checkbox" class="product-checkbox" value="electronics" />
+                                        <div class="label">Electronics</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="venia-product-list" id="product-list"></div>
-                <div class="pagination" id="pagination"></div>
+                <div class="flex-center">
+                    <button id="loadMoreBtn" class="action primary">Load More</button>
+                </div>
             </div>
         </div>
     </section>
-    <section id="section3" class="venia-page-container tab venia-product-byId">
+    <section id="section3" class="venia-page-container nav-tab venia-product-byId" style="display: none;">
         <div id="productById"></div>
     </section>
     <footer>
@@ -250,7 +295,7 @@
             <div class="product-logo">
                 <div>VENIA</div>
             </div>
-            <div>© Company Name Address Ave, City Name, State ZIP</div>
+            <div class="copyrights">© Company Name Address Ave, City Name, State ZIP</div>
             <div class="flex terms">
                 <div class="underline">Terms of Use</div>
                 <div class="underline">Private Policy</div>
@@ -258,26 +303,66 @@
         </div>
     </footer>
 
-    <script src="./assets/scripts/index.js"></script>
     <script src="./assets/scripts/slider.js"></script>
     <script>
+        function showSideBar() {
+            const toggleBar = document.querySelector('.side-bar')
+            toggleBar.style.display = 'block'
+        }
+        function hideSideBar(sectionId) {
+            const toggleBar = document.querySelector('.side-bar')
+            if (sectionId) {
+                showSection(sectionId)
+            }
+            toggleBar.style.display = 'none'
+        }
         function showSection(sectionId) {
-            const tabs = document.querySelectorAll('.tab');
+            event.preventDefault();
+            const tabs = document.querySelectorAll('.nav-tab');
+            let section = sectionId?.split('?')
             tabs.forEach(tab => {
                 tab.style.display = 'none';
             });
 
-            const selectedTab = document.getElementById(sectionId);
+            const selectedTab = document.getElementById(section[0]);
             if (selectedTab) {
                 selectedTab.style.display = 'block';
+                selectedTab.scrollIntoView({ top: 0, behavior: 'smooth' });
             }
+            if (section.length > 1 && section[1]?.includes('id=')) {
+                function navigateToShowSection() {
+                    var url = '?' + section[1];
+                    window.location.href = url;
+                }
+                navigateToShowSection()
+            }
+        }
+    </script>
+    <script>
+        function filterCategory() {
+            const toggleBar = document.querySelector('.filter-mob-category')
+            toggleBar.classList.toggle('active');
+        }
+    </script>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
     </script>
     <script>
         let productData = [];
         let endPoint = 'https://fakestoreapi.com/products'
-        const itemsPerPage = 9;
-        let currentPage = 1;
+        let loadMoreBtn = document.getElementById('loadMoreBtn')
+
+        let startIndex = 0
+        const itemsPerPage = 10;
+
         function getProducts() {
             return fetch(endPoint)
                 .then(response => {
@@ -299,9 +384,7 @@
             const container = document.getElementById('product-list');
             container.innerHTML = '';
 
-            const startIndex = (currentPage - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const productFitered = products.slice(startIndex, endIndex);
+            const productFitered = products.slice(0, startIndex).concat(products.slice(startIndex, startIndex + itemsPerPage));
             const spanTag = document.createElement('span');
             spanTag.textContent = 'No Records';
             spanTag.style.color = 'grey';
@@ -309,13 +392,13 @@
 
             const serachCount = document.getElementById('search-count');
             serachCount.innerHTML = `${productFitered?.length}/${products?.length} ${productFitered.length > 1 ? 'Results' : 'Result'}`
-            
+
             productFitered?.length > 0 ?
                 productFitered.forEach(item => {
                     const div = document.createElement('div');
                     div.classList.add('product-item');
                     div.innerHTML = `
-                <img class="product-image" src=${item.image} onclick="redirectTo(item.id)"/>
+                <img class="product-image" src=${item.image} />
                 <div class="product-description">
         <h3 class="product-title">${item.title}</h3>
         <p class="product-price">$${item.price}</p>
@@ -329,40 +412,13 @@
                     )
                 )
 
-            generatePagination(products.length);
-        }
-
-        function generatePagination(totalItems) {
-            const numPages = Math.ceil(totalItems / itemsPerPage);
-            const paginationElement = document.getElementById('pagination');
-            paginationElement.innerHTML = '';
-
-            for (let i = 1; i <= numPages; i++) {
-                const pageLink = document.createElement('a');
-                pageLink.href = '#';
-                pageLink.classList.add('page-link');
-                if (i === currentPage) {
-                    pageLink.classList.add('active');
-                }
-                pageLink.textContent = i;
-                pageLink.addEventListener('click', () => {
-                    currentPage = i;
-                    displayProducts(productData);
-                    updateActivePageLink();
-                });
-                paginationElement.appendChild(pageLink);
+            if (products.length <= startIndex + itemsPerPage) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
             }
         }
 
-        function updateActivePageLink() {
-            const pageLinks = document.querySelectorAll('.page-link');
-            pageLinks.forEach(link => {
-                link.classList.remove('active');
-                if (parseInt(link.textContent) === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        }
 
         function filterProducts(query) {
             query = query.toLowerCase().trim();
@@ -400,7 +456,7 @@
                 const checkedValues = Array.from(checkboxes)
                     .filter(x => x.checked)
                     .map(check => check.value);
-
+                startIndex = 0
                 if (checkedValues.length > 0) {
                     const filterRecords = productData?.filter((x) => checkedValues?.includes(x?.category))
                     displayProducts(filterRecords)
@@ -410,14 +466,22 @@
             });
         });
 
-        // Event listeners for search and sort
+
+
+        loadMoreBtn.addEventListener('click', function () {
+            startIndex += itemsPerPage;
+            displayProducts(productData);
+        });
+
         document.getElementById('searchInput')?.addEventListener('input', () => {
             const filteredProducts = filterProducts(searchInput.value);
+            startIndex = 0
             displayProducts(filteredProducts);
         });
 
         document.getElementById('sortSelect')?.addEventListener('change', () => {
             const sortedProducts = sortProducts(sortSelect.value);
+
             displayProducts(sortedProducts);
         });
 
@@ -428,19 +492,19 @@
 
         incrementButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const input = button.previousElementSibling; // Get the input element
-                let currentValue = parseInt(input.value); // Get current value and parse as integer
-                input.value = currentValue + 1; // Increment value
+                const input = button.previousElementSibling;
+                let currentValue = parseInt(input.value);
+                input.value = currentValue + 1;
             });
         });
 
-        // Add event listeners to decrement buttons
+
         decrementButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const input = button.nextElementSibling; // Get the input element
-                let currentValue = parseInt(input.value); // Get current value and parse as integer
-                if (currentValue > 1) { // Check if value is greater than 1
-                    input.value = currentValue - 1; // Decrement value
+                const input = button.nextElementSibling;
+                let currentValue = parseInt(input.value);
+                if (currentValue > 1) {
+                    input.value = currentValue - 1;
                 }
             });
         });
@@ -454,20 +518,11 @@
             });
         });
 
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, '\\$&');
-            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
 
-        // Get user ID from query parameter
         const userId = getParameterByName('id');
 
         function getProductsById(products) {
+            console.log(userId, '---')
             let filterRecords = products?.filter((x) => x.id == userId)
             const container = document.getElementById('productById');
             container.innerHTML = '';
@@ -526,17 +581,17 @@
                 })
                 .catch(error => {
                     console.error('Error fetching products:', error);
-                    // Handle error (e.g., display error message to user)
+
                 });
         } else {
-            // Fetch Products and initialize display
+
             getProducts()
                 .then(product => {
                     displayProducts(product);
                 })
                 .catch(error => {
                     console.error('Error fetching products:', error);
-                    // Handle error (e.g., display error message to user)
+
                 });
         }
 
