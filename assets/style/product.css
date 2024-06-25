@@ -135,6 +135,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 15px;
+    width: 95%;
 }
 
 /* .product-cart-page .product-item {
